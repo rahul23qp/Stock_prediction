@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Analysis Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+        background-image: url('licensed-image.jpeg');
+        /* You can also specify additional properties like background size, repeat, position, etc. */
+        background-color: #3f3939; /* Light gray color */
+        }
+
+        h1 {
+            color: #343a40;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .card {
+            margin-bottom: 30px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .card-header {
+            background-color: #007bff;
+            color: #fff;
+        }
+        .card-body {
+            padding: 20px;
+        }
+        img.plot {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Stock Analysis Dashboard</h1>
+
+        <div class="card">
+            <div class="card-header">
+                Stock Data
+            </div>
+            <div class="card-body">
+                <img src="{{ data_columns }}" alt="data_columns" class="plot">
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                Closing Price
+            </div>
+            <div class="card-body">
+                <img src="{{ closing_price_plot }}" alt="Closing Price Plot" class="plot">
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                Sales Volume
+            </div>
+            <div class="card-body">
+                <img src="{{ sales_volume_plot }}" alt="Sales Volume Plot" class="plot">
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                Moving Average
+            </div>
+            <div class="card-body">
+                <img src="{{ moving_average_plot }}" alt="Moving Average Plot" class="plot">
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                Daily Return
+            </div>
+            <div class="card-body">
+                <img src="{{ daily_return_plot }}" alt="Daily Return Plot" class="plot">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
